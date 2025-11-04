@@ -375,11 +375,21 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     </ul>
 
     
-    <a href="https://github.com/jamesong377/jwesong111.github.io/raw/main/LauncherP9.zip" 
-     download="LauncherP9.zip"
-     class="px-8 py-4 bg-green-500 hover:bg-green-400 text-neutral-900 font-bold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-bounce mb-4 inline-block text-center">
-     DOWNLOAD LAUNCHERP9
-    </a>
+    <button onclick="downloadFile()" class="px-8 py-4 bg-green-500 hover:bg-green-400 text-neutral-900 font-bold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-bounce mb-4">
+  DOWNLOAD LAUNCHERP9
+</button>
+
+<script>
+function downloadFile() {
+  const link = document.createElement('a');
+  link.href = 'https://github.com/jamesong377/jwesong111.github.io/raw/main/LauncherP9.zip';
+  link.download = 'LauncherP9.zip'; // Имя файла при сохранении
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
 
     
     <p class="text-neutral-400 text-sm mb-4">LauncherP9.exe | Version 2.3.1 | Size: 48.2 MB</p>
